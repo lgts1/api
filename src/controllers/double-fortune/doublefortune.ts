@@ -23,6 +23,8 @@ export default {
    async getdouble(req: Request, res: Response) {
       try {
 
+         const user = await doublefortunefunctions.getuserbyatk(token)
+
          const jsonformatado = await JSON.parse('{"dt":{"si":{"wp":null,"lw":null,"lwm":null,"slw":null,"nk":null,"sc":0,"fs":null,"gwt":0,"fb":null,"ctw":0.0,"pmt":null,"cwc":0,"fstc":null,"pcwc":0,"rwsp":null,"hashr":null,"ml":1,"cs":0.01,"rl":[8,16,9,11,5,18,1,2,4,12,6,17,7,15,10],"sid":"0","psid":"0","st":1,"nst":1,"pf":0,"aw":0.00,"wid":0,"wt":"C","wk":"0_C","wbn":null,"wfg":null,"blb":0.00,"blab":0.00,"bl":0.31,"tb":0.00,"tbb":0.00,"tw":0.00,"np":0.00,"ocr":null,"mr":null,"ge":null}}}')
 
          res.send({
