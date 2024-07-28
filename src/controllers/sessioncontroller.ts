@@ -15,7 +15,7 @@ export default {
          err:null
          }
       )
-   }
+   },
    async verifySession(req: Request, res: Response) {
       const token: string = req.body.tk
       const gi = req.body.gi
