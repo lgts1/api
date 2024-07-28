@@ -19,6 +19,7 @@ const routes = Router()
 
 //CONTROLLER SESSION
 routes.post("/web-api/game-proxy/v2/Resources/GetByResourcesTypeIds", sessioncontroller.resourcetypeids)
+routes.post("/web-api/game-proxy/v2/GameName/Get", sessioncontroller.gamename);
 
 //API CONTROLLERS
 routes.post("/api/v1/game_launch", apicontroller.launchgame)
