@@ -21,7 +21,7 @@ export default {
          const token = req.body.atk
          const user = await fortunemousefunctions.getuserbyatk(token)
 
-         const jsonformatado = await JSON.parse('{"dt":{"si":{"wp":{"1":[1,4,7],"2":[0,3,6],"3":[2,5,8],"4":[0,4,8],"5":[2,4,6]},"lw":{"1":10000,"2":10000,"3":10000,"4":10000,"5":10000},"orl":null,"idr":true,"ir":false,"ist":false,"rc":0,"itw":false,"wc":0,"gwt":-1,"fb":null,"ctw":50000,"pmt":null,"cwc":0,"fstc":null,"pcwc":0,"rwsp":false,"hashr":"0:3;0;1#3;0;4#3;0;4#MV#3.0#MT#1#MG#0#","ml":"10","cs":"10","rl":[1,1,1,0,0,0,1,1,1],"sid":"1763628543189646848","psid":"1763628543189646848","st":4,"nst":1,"pf":1,"aw":50000,"wid":0,"wt":"C","wk":"0_C","wbn":null,"wfg":null,"blb":1636610,"blab":1686110,"bl":1686110,"tb":500,"tbb":500,"tw":50000,"np":50000,"ocr":null,"mr":null,"ge":[4,11]}},"err":null}')
+         const jsonformatado = await JSON.parse('{"dt":{"si":{"wp":null,"lw":null,"orl":null,"idr":false,"ir":false,"ist":false,"rc":0,"itw":true,"wc":2,"gwt":-1,"fb":null,"ctw":0,"pmt":null,"cwc":0,"fstc":null,"pcwc":0,"rwsp":null,"hashr":"0:4;0;1#6;2;4#6;2;4#MV#3.0#MT#1#MG#0#","ml":"1","cs":"0.1","rl":[6,3,5,5,1,6,3,6,4],"sid":"1763417740045909504","psid":"1763417740045909504","st":1,"nst":1,"pf":1,"aw":0,"wid":0,"wt":"C","wk":"0_C","wbn":null,"wfg":null,"blb":10124.6,"blab":10124.1,"bl":10124.1,"tb":0.5,"tbb":0.5,"tw":0,"np":-0.5,"ocr":null,"mr":null,"ge":[1,11]}},"err":null}')
 
          res.send({
             dt: {
