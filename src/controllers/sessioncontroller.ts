@@ -4,6 +4,18 @@ import allfunctions from "../functions/allfunctions"
 import "dotenv/config"
 
 export default {
+
+
+   async gamename(req: Request, res: Response) {
+      res.send(
+         {
+         dt: {
+            31:"Baccarat Deluxe"
+         },
+         err:null
+         }
+      )
+   }
    async verifySession(req: Request, res: Response) {
       const token: string = req.body.tk
       const gi = req.body.gi
