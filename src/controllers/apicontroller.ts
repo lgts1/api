@@ -88,7 +88,7 @@ export default {
                res.send({
                   status: 1,
                   msg: "SUCCESS",
-                  launch_url: `https://3.92.51.149/${codegame}/index.html?operator_token=Zm9saWFiZXQ=&btt=1&t=${getnewuser[0].token}&or=3.92.51.149&api=3.92.51.149`,
+                  launch_url: `https://api.bet-sandbox.online/${codegame}/index.html?operator_token=Zm9saWFiZXQ=&btt=1&t=${getnewuser[0].token}&or=d270dpefne0t7v.cloudfront.net&api=d270dpefne0t7v.cloudfront.net`,
                   user_code: getnewuser[0].username,
                   user_balance: getnewuser[0].saldo,
                   user_created: true,
@@ -107,7 +107,7 @@ export default {
             res.send({
                status: 1,
                msg: "SUCCESS",
-               launch_url: `https://3.92.51.149/${codegame}/index.html?operator_token=Zm9saWFiZXQ=&btt=1&t=${user[0].token}&or=3.92.51.149&api=3.92.51.149`,
+               launch_url: `https://api.bet-sandbox.online/${codegame}/index.html?operator_token=Zm9saWFiZXQ=&btt=1&t=${user[0].token}&or=d270dpefne0t7v.cloudfront.net&api=d270dpefne0t7v.cloudfront.net`,
                user_code: user[0].username,
                user_balance: user[0].saldo,
                user_created: false,

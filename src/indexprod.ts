@@ -24,12 +24,7 @@ const app = express()
 const httpServer = http.createServer(app)
 const io = new Server(httpServer)
 
-console.log(figlet.textSync("API DE JOGOS JOHN"), "\n")
 
-// httpServer.listen(process.env.PORT, () => {
-//   logger.info("SERVIDOR INICIADO JOHN " + process.env.PORT)
-
-// })
 declare module "express-serve-static-core" {
    interface Request {
       io: Server
@@ -125,7 +120,6 @@ app.use((req: Request, res: Response, next) => {
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use("/", express.static(path.join(__dirname, "public")))
 app.use(
    helmet.contentSecurityPolicy({
       useDefaults: false,

@@ -17,15 +17,8 @@ import notcashganesha from "../../jsons/ganesha-gold/notcashganesha"
 export default {
    async getganesha(req: Request, res: Response) {
       try {
-         const token = req.body.atk
 
-         const user = await ganeshagoldfunctions.getuserbyatk(token)
-         const jsonprimay = await ganeshagoldfunctions.getjsonganesha(user[0].id)
-         if (jsonprimay.length === 0) {
-            await ganeshagoldfunctions.createjsonganesha(user[0].id)
-         }
-         const json = await ganeshagoldfunctions.getjsonganesha(user[0].id)
-         const jsonformatado = await JSON.parse(json[0].json)
+         const jsonformatado = await JSON.parse('{"dt":{"si":{"wp":null,"lw":null,"ltw":0.0,"snww":null,"fs":null,"sc":0,"gwt":0,"fb":null,"ctw":0.0,"pmt":null,"cwc":0,"fstc":null,"pcwc":0,"rwsp":null,"hashr":null,"ml":2,"cs":0.3,"rl":[2,1,5,4,3,3,0,9,7,8,8,6,7,3,6],"sid":"0","psid":"0","st":1,"nst":1,"pf":0,"aw":0.00,"wid":0,"wt":"C","wk":"0_C","wbn":null,"wfg":null,"blb":0.00,"blab":0.00,"bl":100000.00,"tb":0.00,"tbb":0.00,"tw":0.00,"np":0.00,"ocr":null,"mr":null,"ge":null}},"err":null}')
 
          res.send({
             dt: {

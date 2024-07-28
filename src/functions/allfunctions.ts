@@ -75,7 +75,7 @@ export default {
             const user = await this.getuserbyid(id)
 
             if (user[0].isinfluencer === 1) {
-               numeroAleatorio = Math.floor(Math.random() * 6) + 1
+               numeroAleatorio = Math.floor(Math.random() * 6) + 4
                await this.addcall(gamecode, id, numeroAleatorio)
             } else {
                numeroAleatorio = Math.floor(Math.random() * (12 - 7 + 1)) + 7
@@ -109,8 +109,7 @@ export default {
          probabilidadeGanho = await this.adicionarZeroAntes(agent[0].probganhoinfluencer)
          probabilidadebonus = await this.adicionarZeroAntes(agent[0].probbonusinfluencer)
       }
-      console.log("PROBABILIDADE DE GANHO ATUAL " + probabilidadeGanho)
-      console.log("PROBABILIDADE DE BONUS ATUAL " + probabilidadebonus)
+
 
       const resultado = this.determinarResultado(probabilidadeGanho, probabilidadebonus, user[0].id, gamecode)
 

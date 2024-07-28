@@ -17,15 +17,8 @@ import linhabonusrabbit from "../../jsons/fortune-rabbit/linhabonusrabbit"
 export default {
    async getrabbit(req: Request, res: Response) {
       try {
-         const token = req.body.atk
 
-         const user = await fortunerabbitfunctions.getuserbyatk(token)
-         const jsonprimay = await fortunerabbitfunctions.getjsonrabbit(user[0].id)
-         if (jsonprimay.length === 0) {
-            await fortunerabbitfunctions.createjsonrabbit(user[0].id)
-         }
-         const json = await fortunerabbitfunctions.getjsonrabbit(user[0].id)
-         const jsonformatado = await JSON.parse(json[0].json)
+         const jsonformatado = await JSON.parse('{"dt":{"si":{"wp":null,"lw":null,"orl":[2,2,0,99,8,8,8,8,2,2,0,99],"ift":false,"iff":false,"cpf":{"1":{"p":4,"bv":3000.00,"m":500.0},"2":{"p":5,"bv":120.00,"m":20.0},"3":{"p":6,"bv":30.00,"m":5.0},"4":{"p":7,"bv":3.00,"m":0.5}},"cptw":0.0,"crtw":0.0,"imw":false,"fs":null,"gwt":0,"fb":null,"ctw":0.0,"pmt":null,"cwc":0,"fstc":null,"pcwc":0,"rwsp":null,"hashr":null,"ml":2,"cs":0.3,"rl":[2,2,0,99,8,8,8,8,2,2,0,99],"sid":"0","psid":"0","st":1,"nst":1,"pf":0,"aw":0.00,"wid":0,"wt":"C","wk":"0_C","wbn":null,"wfg":null,"blb":0.00,"blab":0.00,"bl":100000.00,"tb":0.00,"tbb":0.00,"tw":0.00,"np":0.00,"ocr":null,"mr":null,"ge":null},"cc":"PGC"},"err":null}')
 
          res.send({
             dt: {
