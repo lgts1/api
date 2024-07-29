@@ -24,27 +24,9 @@
     <meta name="x5-orientation" content="portrait">
     <meta name="browsermode" content="application">
     <meta name="x5-page-mode" content="app">
-    <script src="https://cdn.socket.io/4.3.1/socket.io.min.js"></script>
 
     <title>Fortune Rabbit</title>
-    <script>
-        const host_name = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
-        const socket = io(host_name);
 
-        const params = new URLSearchParams(window.location.search);
-        const data = [].concat(Array.from(params.entries())).reduce((acum, param) => {
-            acum[param[0]] = param[1];
-            return acum;
-        }, {});
-
-        const { t: token } = data;
-        const gameId = window.location.pathname.split("/")[1];
-
-        socket.on("connect", function () {
-            socket.emit("join", { token: token, gameId: gameId });
-        });
-
-    </script>
     <style id="initial-style">
         body {
             height: 100vh;
