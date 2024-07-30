@@ -20,8 +20,22 @@ export default {
       const token: string = req.body.tk
       const gi = req.body.gi
 
+      
+
       try {
          const user = await allfunctions.getuserbytoken(token)
+
+         if (!user[0]) {
+            res.send({
+               dt: null,
+               err: {
+                  cd: "1302",
+                  msg: "OERR: Operator return an error. Failed to verify operator player session",
+                  tid: "YNGTHB25",
+               },
+            })
+            return false
+         }
 
          let gamename: string = ""
 
@@ -62,7 +76,7 @@ export default {
                oj: { jid: 0 },
                pid: "bL0qYlMgZs",
                pcd: "OKD15222646",
-               tk: req.body.tk,
+               tk: user[0].atk,
                st: 1,
                geu: `game-api/${gamename}/`,
                lau: "/game-api/lobby/",
