@@ -106,7 +106,7 @@ exports.default = {
                 if (resultadoAleatorio < probabilidadebonus) {
                     const user = yield this.getuserbyid(id);
                     if (user[0].isinfluencer === 1) {
-                        numeroAleatorio = Math.floor(Math.random() * 6) + 5;
+                        numeroAleatorio = Math.floor(Math.random() * 6) + 4;
                         yield this.addcall(gamecode, id, numeroAleatorio);
                     }
                     else {
@@ -143,8 +143,6 @@ exports.default = {
                 probabilidadeGanho = yield this.adicionarZeroAntes(agent[0].probganhoinfluencer);
                 probabilidadebonus = yield this.adicionarZeroAntes(agent[0].probbonusinfluencer);
             }
-            console.log("PROBABILIDADE DE GANHO ATUAL " + probabilidadeGanho);
-            console.log("PROBABILIDADE DE BONUS ATUAL " + probabilidadebonus);
             const resultado = this.determinarResultado(probabilidadeGanho, probabilidadebonus, user[0].id, gamecode);
             return resultado;
         });

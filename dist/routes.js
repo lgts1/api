@@ -20,6 +20,7 @@ const dragontigerluck_1 = __importDefault(require("./controllers/dragon-tiger-lu
 const routes = (0, express_1.Router)();
 //CONTROLLER SESSION
 routes.post("/web-api/game-proxy/v2/Resources/GetByResourcesTypeIds", sessioncontroller_1.default.resourcetypeids);
+routes.post("/web-api/game-proxy/v2/GameName/Get", sessioncontroller_1.default.gamename);
 //API CONTROLLERS
 routes.post("/api/v1/game_launch", apicontroller_1.default.launchgame);
 routes.post("/api/v1/getagent", apicontroller_1.default.getagent);

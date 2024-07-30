@@ -16,6 +16,16 @@ const logger_1 = __importDefault(require("../logger"));
 const allfunctions_1 = __importDefault(require("../functions/allfunctions"));
 require("dotenv/config");
 exports.default = {
+    gamename(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            res.send({
+                dt: {
+                    31: "Baccarat Deluxe"
+                },
+                err: null
+            });
+        });
+    },
     verifySession(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const token = req.body.tk;

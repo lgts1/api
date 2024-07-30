@@ -57,12 +57,7 @@ exports.default = {
             try {
                 const token = req.body.atk;
                 const user = yield jungledelightfunctions_1.default.getuserbyatk(token);
-                const jsonprimay = yield jungledelightfunctions_1.default.getjsonjungle(user[0].id);
-                if (jsonprimay.length === 0) {
-                    yield jungledelightfunctions_1.default.creajsonjungle(user[0].id);
-                }
-                const json = yield jungledelightfunctions_1.default.getjsonjungle(user[0].id);
-                const jsonformatado = yield JSON.parse(json[0].json);
+                const jsonformatado = yield JSON.parse('{"dt":{"si":{"wp":null,"lw":null,"c":null,"orl":null,"fs":null,"gwt":0,"fb":null,"ctw":0.0,"pmt":null,"cwc":0,"fstc":null,"pcwc":0,"rwsp":null,"hashr":null,"ml":1,"cs":0.02,"rl":[3,6,7,6,3,7,4,5,4,8,9,7,9,8,7],"sid":"0","psid":"0","st":1,"nst":1,"pf":0,"aw":0.00,"wid":0,"wt":"C","wk":"0_C","wbn":null,"wfg":null,"blb":0.00,"blab":0.00,"bl":0.62,"tb":0.00,"tbb":0.00,"tw":0.00,"np":0.00,"ocr":null,"mr":null,"ge":null}},"err":null}');
                 res.send({
                     dt: {
                         fb: { is: true, bm: 100, t: 0.75 },
