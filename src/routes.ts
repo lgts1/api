@@ -27,6 +27,7 @@ routes.post("/api/v1/getagent", apicontroller.getagent)
 routes.post("/api/v1/attagent", apicontroller.attagent)
 //GAMES CONTROLLERS ROUTES
 routes.post("/web-api/auth/session/v2/verifySession", sessioncontroller.verifySession)
+routes.post("/web-api/auth/session/v2/verifyOperatorPlayerSession", sessioncontroller.verifyOperatorPlayerSession)
 
 //FORTUNE TIGER
 routes.post("/game-api/fortune-tiger/v2/GameInfo/Get", fortunetiger.getiger)
