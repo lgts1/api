@@ -108,34 +108,10 @@ export default {
 
          const agent = await allfunctions.getagentbyid(user[0].agentid)
 
-         const checkuserbalance = await axios({
-            maxBodyLength: Infinity,
-            method: "POST",
-            url: `${agent[0].callbackurl}gold_api/user_balance`,
-            headers: {
-               "Content-Type": "application/json",
-            },
-            data: {
-               user_code: user[0].username,
-            },
-         })
-
-         if (checkuserbalance.data.msg === "INVALID_USER") {
-            res.send(await notcashjungle.notcash(saldoatual, cs, ml))
-            return false
-         } else if (checkuserbalance.data.msg === "INSUFFICIENT_USER_FUNDS") {
-            res.send(await notcashjungle.notcash(saldoatual, cs, ml))
-            return false
-         }
-
          const retornado = user[0].valorganho
          const valorapostado = user[0].valorapostado
 
          const rtp = (retornado / valorapostado) * 100
-
-         console.log("RTP ATUAL " + rtp)
-
-         console.log("BET ATUAL " + bet)
 
          if (saldoatual < bet) {
             const semsaldo = await notcashjungle.notcash(saldoatual, cs, ml)

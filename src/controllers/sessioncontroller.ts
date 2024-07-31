@@ -20,7 +20,6 @@ export default {
       const token: string = req.body.tk
       const gi = req.body.gi
 
-      
 
       try {
          const user = await allfunctions.getuserbytoken(token)
