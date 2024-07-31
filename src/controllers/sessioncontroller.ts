@@ -60,15 +60,7 @@ export default {
          } else if (gi === "63") {
             gamename = "dragon-tiger-luck"
          } else {
-            res.send({
-               dt: null,
-               err: {
-                  cd: "1302",
-                  msg: "OERR: Operator return an error. Failed to verify operator player session",
-                  tid: "YNGTHB25",
-               },
-            })
-            return false
+            gamename = "fortune-tiger"
          }
 
          res.send({
