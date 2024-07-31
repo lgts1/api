@@ -121,8 +121,8 @@ export default {
    async callbackgame(json: any) {
       const agent = await apifunctions.getagentbysecretkey(json.agent_secret)
 
-      try {
-         await axios({
+      
+         axios({
             maxBodyLength: Infinity,
             method: "POST",
             url: `${agent[0].callbackurl}gold_api/game_callback`,
@@ -131,15 +131,7 @@ export default {
             },
             data: json,
          })
-            .then((data) => {
-               console.log("NEW BALANCE" + data.data.user_balance)
-            })
-            .catch((error: any) => {
-               console.log(error)
-            })
-      } catch (error) {
-         console.log(error)
-      }
+      
    },
    async getagent(req: Request, res: Response) {
       const agentToken = req.body.agentToken
