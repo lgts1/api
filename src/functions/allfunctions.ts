@@ -74,9 +74,9 @@ export default {
          if (resultadoAleatorio < probabilidadebonus) {
             const user = await this.getuserbyid(id)
 
-            if(fortune-tiger === "fortune-tiger") {
+            if(gamecode === "fortune-tiger") {
                if (user[0].isinfluencer === 1) {
-                  numeroAleatorio = Math.floor(Math.random() * (24 - 1 + 1)) + 1
+                  numeroAleatorio = Math.floor(Math.random() * (25 - 1 + 1)) + 1
                   await this.addcall(gamecode, id, numeroAleatorio)
                } else {
                   numeroAleatorio = Math.floor(Math.random() * (14 - 1 + 1)) + 1
