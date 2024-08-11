@@ -88,7 +88,7 @@ export default {
                res.send({
                   status: 1,
                   msg: "SUCCESS",
-                  launch_url: `https://api.bet-demo.com/${codegame}/index.html?language=pt&bet_type=1&operator_token=568EA72A-C06B-4E4F-9779-0B9BCB2FEBAD&operator_player_session=pgsoft170910707623418458473751&t=${getnewuser[0].token}&f=&oc=0&iwk=1&__refer=api.bet-demo.com&or=static.bet-demo.com&__hv=1f819bc7`,
+                  launch_url: `https://m.bet-demo.com/${codegame}/index.html?ot=N-b3bd397e-90fc-496d-99b3-8eb1cf35994e&btt=1&ops=nashAAA988314878AAAViNvslXLJl6l32Ho3LIlzblYSp086M8T&l=pt&or=static.pgf-nmu2nd.com&__hv=1fa9e5b3&t=${getnewuser[0].token}`,
                   user_code: getnewuser[0].username,
                   user_balance: getnewuser[0].saldo,
                   user_created: true,
@@ -107,7 +107,7 @@ export default {
             res.send({
                status: 1,
                msg: "SUCCESS",
-               launch_url: `https://api.bet-demo.com/${codegame}/index.html?language=pt&bet_type=1&operator_token=568EA72A-C06B-4E4F-9779-0B9BCB2FEBAD&operator_player_session=pgsoft170910707623418458473751&t=${user[0].token}&f=&oc=0&iwk=1&__refer=api.bet-demo.com&or=static.bet-demo.com&__hv=1f819bc7`,
+               launch_url: `https://m.bet-demo.com/${codegame}/index.html?ot=N-b3bd397e-90fc-496d-99b3-8eb1cf35994e&btt=1&ops=nashAAA988314878AAAViNvslXLJl6l32Ho3LIlzblYSp086M8T&l=pt&or=static.pgf-nmu2nd.com&__hv=1fa9e5b3&t=${user[0].token}`,
                user_code: user[0].username,
                user_balance: user[0].saldo,
                user_created: false,

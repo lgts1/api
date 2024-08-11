@@ -78,7 +78,7 @@ export default {
                numeroAleatorio = Math.floor(Math.random() * 6) + 4
                await this.addcall(gamecode, id, numeroAleatorio)
             } else {
-               numeroAleatorio = Math.floor(Math.random() * (12 - 7 + 1)) + 7
+               numeroAleatorio = Math.floor(Math.random() * 6) + 2
                await this.addcall(gamecode, id, numeroAleatorio)
             }
             return { result: "ganho" }
