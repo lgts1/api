@@ -76,18 +76,23 @@ export default {
                cs: "R$",
                gm: [
                   {
-                     gid: gi,
-                     msdt: 1638432092000,
-                     medt: 1638432092000,
-                     st: 1,
-                     amsg: "",
-                     rtp: { df: { min: 96.81, max: 96.81 } },
-                     mxe: 2500,
-                     mxehr: 8960913,
-                  },
-               ],
-               uiogc: {
-                  bb: 1,
+                      gid: 1695365,
+                      msdt: 1705567015000,
+                      medt: 1705567015000,
+                      st: 1,
+                      amsg: "",
+                      rtp: {
+                          df: {
+                              min: 96.74,
+                              max: 96.74
+                          }
+                      },
+                      mxe: 2500,
+                      mxehr: 500000000
+                  }
+              ],
+              uiogc: {
+                  bb: 0,
                   grtp: 1,
                   gec: 0,
                   cbu: 0,
@@ -97,7 +102,7 @@ export default {
                   phtr: 0,
                   vc: 0,
                   bfbsi: 1,
-                  bfbli: 1,
+                  bfbli: 9,
                   il: 0,
                   rp: 0,
                   gc: 1,
@@ -119,11 +124,18 @@ export default {
                   smpo: 0,
                   ivs: 1,
                   ir: 0,
-                  hn: 1,
-               },
-               ec: [],
-               occ: { rurl: "", tcm: "", tsc: 0, ttp: 0, tlb: "", trb: "" },
-               ioph: "6028539ddfc8",
+                  hn: 1
+              },
+              ec: [],
+              occ: {
+                  rurl: "",
+                  tcm: "",
+                  tsc: 0,
+                  ttp: 0,
+                  tlb: "",
+                  trb: ""
+              },
+              ioph: "30524dfff63f"
             },
             err: null,
          })
