@@ -33,9 +33,7 @@ export default {
                bl: user[0].saldo,
                inwe: jsonformatado.dt.inwe,
                iuwe: jsonformatado.dt.iuwe,
-               ls: {
-                  si: jsonformatado.dt.si,
-               },
+               ls: jsonformatado.dt.ls,
                cc: "BRL",
             },
             err: null,
