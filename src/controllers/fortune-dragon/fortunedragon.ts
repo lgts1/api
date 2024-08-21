@@ -20,19 +20,19 @@ export default {
          const token = req.body.atk
          const user = await fortunedragonfunctions.getuserbyatk(token)
 
-         const jsonformatado = await JSON.parse('{"dt":{"si":{"wp":null,"lw":null,"gm":1,"it":false,"orl":[2,2,5,0,0,0,6,3,3],"fs":null,"mf":{"mt":[2],"ms":[true],"mi":[0]},"ssaw":0.00,"crtw":0.0,"imw":false,"gwt":0,"fb":null,"ctw":0.0,"pmt":null,"cwc":0,"fstc":null,"pcwc":0,"rwsp":null,"hashr":null,"ml":2,"cs":0.3,"rl":[2,2,5,0,0,0,6,3,3],"sid":"0","psid":"0","st":1,"nst":1,"pf":0,"aw":0.00,"wid":0,"wt":"C","wk":"0_C","wbn":null,"wfg":null,"blb":0.00,"blab":0.00,"bl":100000.00,"tb":0.00,"tbb":0.00,"tw":0.00,"np":0.00,"ocr":null,"mr":null,"ge":null}},"err":null}')
+         const jsonformatado = await JSON.parse('{"dt":{"fb":{"is":true,"bm":5,"t":500},"wt":{"mw":5,"bw":20,"mgw":35,"smgw":50},"maxwm":2500,"cs":[0.08,0.8,3,10],"ml":[1,2,3,4,5,6,7,8,9,10],"mxl":5,"bl":20,"inwe":false,"iuwe":false,"ls":{"si":{"wp":null,"lw":null,"gm":1,"it":false,"orl":[2,2,5,0,0,0,6,3,3],"fs":null,"mf":{"mt":[2],"ms":[true],"mi":[0]},"ssaw":0,"crtw":0,"imw":false,"gwt":0,"fb":null,"ctw":0,"pmt":null,"cwc":0,"fstc":null,"pcwc":0,"rwsp":null,"hashr":null,"ml":10,"cs":0.08,"rl":[2,2,5,0,0,0,6,3,3],"sid":"0","psid":"0","st":1,"nst":1,"pf":0,"aw":0,"wid":0,"wt":"C","wk":"0_C","wbn":null,"wfg":null,"blb":0,"blab":0,"bl":20,"tb":0,"tbb":0,"tw":0,"np":0,"ocr":null,"mr":null,"ge":null}},"cc":"BRL"},"err":null}')
 
          res.send({
             dt: {
-               fb: { is: false, bm: 5, t: 0.15 },
-               wt: { mw: 5.0, bw: 20.0, mgw: 35.0, smgw: 50.0 },
-               maxwm: 2500,
-               cs: [0.08, 0.8, 3.0, 10.0],
-               ml: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-               mxl: 5,
+               fb: jsonformatado.dt.fb,
+               wt: jsonformatado.dt.wt,
+               maxwm: jsonformatado.dt.maxwm,
+               cs: jsonformatado.dt.cs,
+               ml: jsonformatado.dt.ml,
+               mxl: jsonformatado.dt.mxl,
                bl: user[0].saldo,
-               inwe: false,
-               iuwe: false,
+               inwe: jsonformatado.dt.inwe,
+               iuwe: jsonformatado.dt.iuwe,
                ls: {
                   si: jsonformatado.dt.si,
                },
