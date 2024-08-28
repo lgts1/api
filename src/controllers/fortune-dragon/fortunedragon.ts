@@ -91,7 +91,7 @@ export default {
       try {
          const user = await fortunedragonfunctions.getuserbyatk(token)
          let bet: number = cs * ml * 5
-         if (req.body.fb != false) {
+         if (req.body.fb > 0) {
             bet = bet * 5
          }
          
@@ -123,7 +123,7 @@ export default {
             }
          }
 
-         if (req.body.fb != false) {
+         if (req.body.fb > 0) {
             resultadospin.result = "ganho"
          }
 
