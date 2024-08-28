@@ -91,6 +91,10 @@ export default {
       try {
          const user = await fortunedragonfunctions.getuserbyatk(token)
          let bet: number = cs * ml * 5
+         if (req.body.fb) {
+            bet = bet * 5
+         }
+         
          let saldoatual: number = user[0].saldo
          const gamename = "fortune-dragon"
 
@@ -110,13 +114,17 @@ export default {
 
          const rtp = (retornado / valorapostado) * 100
 
-         const resultadospin = await allfunctions.calcularganho(bet, saldoatual, token, gamename)
+         let resultadospin = await allfunctions.calcularganho(bet, saldoatual, token, gamename)
          if (resultadospin.result === "perda" || resultadospin.result === "ganho") {
             if (saldoatual < bet) {
                const semsaldo = await notcashdragon.notcash(saldoatual, cs, ml)
                res.send(semsaldo)
                return false
             }
+         }
+
+         if (req.body.fb) {
+            resultadospin.result = "ganho"
          }
 
          if (resultadospin.result === "perda") {
