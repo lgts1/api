@@ -87,12 +87,12 @@ export default {
 
       async function bvchange(bet: number, json: { [key: string]: any }) {
          for (const chave in json) {
-            json[chave].bv = cs * ml * 5 * parseFloat(json[chave].m)
+            json[chave].bv = cs * ml * 10 * parseFloat(json[chave].m)
          }
       }
       try {
          const user = await fortunerabbitfunctions.getuserbyatk(token)
-         let bet: number = cs * ml * 5
+         let bet: number = cs * ml * 10
          let saldoatual: number = user[0].saldo
          const gamename = "fortune-rabbit"
 
