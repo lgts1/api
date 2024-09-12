@@ -364,6 +364,8 @@ export default {
 
             let valorganho = cs * ml * multplicador * mulplicadores
 
+            console.log('cs: ' + cs + ' ml: '+ ml + ' multiplicador: ' + multplicador + ' multiplicadores: ' + mulplicadores)
+
             let newbalance = 0
 
             if (calltwo[0].steps === Object.keys(bonusjson).length - 1) {
